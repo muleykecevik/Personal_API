@@ -1,18 +1,20 @@
 "use strict"
-const { Schema } = require('mongoose')
 /* -------------------------------------------------------
     EXPRESS - Personnel API
 ------------------------------------------------------- */
-
 const { mongoose } = require('../configs/dbConnection')
+/* ------------------------------------------------------- */
 
 const DepartmentSchema = new mongoose.Schema({
+
     name: {
         type: String,
         trim: true,
         required: true,
-        unique: true,
+        unique: true
     }
-}, { collection: "departments", timestamps: true })
-module.exports = mongoose.model('Department', DepartmentSchema)
 
+}, { collection: "departments", timestamps: true })
+
+/* ------------------------------------------------------- */
+module.exports = mongoose.model('Department', DepartmentSchema)
