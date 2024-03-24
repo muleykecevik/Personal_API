@@ -76,8 +76,8 @@ module.exports = {
             error: false,
             detail: await res.getModelListDetails(
                 Personnel,
-                { departmentId: req.params.id },
-                "departmentId"
+                { departmentId: req.params.id }
+
             ),
             data,
         });
